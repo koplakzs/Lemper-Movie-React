@@ -4,7 +4,7 @@ import { Link, useLocation } from "react-router-dom";
 const Navigation = () => {
   const location = useLocation();
   return (
-    <nav className="navbar navbar-expand-lg bg-dark ">
+    <nav className="navbar navbar-expand-lg bg-dark fixed-top">
       <div className="container-fluid">
         <a className="navbar-brand text-white" href="#">
           Lemper Movie
