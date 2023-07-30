@@ -41,3 +41,23 @@
   left: 0;
   margin-top: 10px;
 }
+
+.card-movie {
+  height: 20rem;
+  width: 20rem;
+  background-size:cover;
+}
+
+.card-movie-title {
+  
+  text-shadow: 1px 1px #000000;
+}
+
+.vote-average {
+  width: 40px;
+  height: 40px;
+}
+
+.space-movies{
+  margin-top: 100px;
+}

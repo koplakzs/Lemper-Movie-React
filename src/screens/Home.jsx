@@ -31,11 +31,25 @@ const Home = () => {
   return (
     <div>
       <Carousel movie={nowPlay.slice(0, 5)} />
-      <div className="ms-5 mb-5">
+      <div className="ms-5 me-5 mb-5">
         <h1 className="underline text-warning position-relative pb-3">
           Now Playing
         </h1>
         <Cards movies={nowPlay.slice(5)} />
+      </div>
+      <div className="space-movies ms-5 me-5 d-flex justify-content-between">
+        <div className="border col">
+          <h3 className="underline text-warning position-relative pb-3">
+            Popular Movie
+          </h3>
+          {/* <Cards movies={""} /> */}
+        </div>
+        <div className="border col-4">
+          <h3 className="underline text-warning position-relative pb-3">
+            Upcoming Movie
+          </h3>
+          {/* <Cards movies={""} /> */}
+        </div>
       </div>
     </div>
   );
