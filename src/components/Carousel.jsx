@@ -29,7 +29,7 @@ const Carousel = ({ movie }) => {
             />
 
             <div className="container">
-              <div className="carousel-caption">
+              <div className="carousel-caption ">
                 <h1 className="text-shadow fw-bold">{movie.original_title}</h1>
                 <p className="text-shadow-blur fs-5">{movie.overview}</p>
 
