@@ -1,9 +1,9 @@
 import React from "react";
 import Card from "./Card";
 
-const Cards = ({ movies }) => {
+const Popular = ({ movies }) => {
   return (
-    <div className="d-flex justify-content-evenly gap-4 flex-wrap mt-5">
+    <div className="d-flex justify-content-evenly gap-4 flex-wrap">
       {movies.map((movie, index) => (
         <Card key={index} movie={movie} />
       ))}
@@ -11,4 +11,4 @@ const Cards = ({ movies }) => {
   );
 };
 
-export default Cards;
+export default Popular;

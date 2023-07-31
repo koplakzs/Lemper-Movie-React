@@ -47,6 +47,11 @@
   width: 20rem;
   background-size:cover;
 }
+.card-movie-upcoming {
+  height: max-content;
+  width: 15rem;
+  background-size:cover;
+}
 
 .card-movie-title {
   
@@ -60,4 +65,14 @@
 
 .space-movies{
   margin-top: 100px;
+}
+
+.height-movie{
+  height:100rem;
+}
+
+.img-upcoming {
+  height: 15rem;
+  width: 12rem;
+  margin: 0 auto;
 }

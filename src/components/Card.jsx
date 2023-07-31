@@ -2,8 +2,6 @@ import React from "react";
 
 const Card = ({ movie }) => {
   const imgUrl = "https://image.tmdb.org/t/p/w500";
-
-  console.log(movie);
   return (
     <div
       className="card-movie card"

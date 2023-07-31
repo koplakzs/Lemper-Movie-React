@@ -3,10 +3,13 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Carousel from "../components/Carousel";
 import Cards from "../components/Cards";
+import Upcoming from "../components/Upcoming";
+import Popular from "../components/Popular";
 
 const Home = () => {
-  const imgUrl = "https://image.tmdb.org/t/p/original";
   const [nowPlay, setNowPlay] = useState([]);
+  const [pop, setPop] = useState([]);
+  const [upComing, setUpcoming] = useState([]);
   const header = {
     Authorization: `Bearer ${import.meta.env.VITE_API_ACCESS_TOKEN}`,
   };
@@ -24,9 +27,37 @@ const Home = () => {
       console.log(e);
     }
   };
+  const fetchMoviePopular = () => {
+    try {
+      axios
+        .get("https://api.themoviedb.org/3/movie/popular", {
+          headers: header,
+        })
+        .then((res) => {
+          setPop(res.data.results);
+        });
+    } catch (e) {
+      console.log(e);
+    }
+  };
+  const fetchMovieUpComing = () => {
+    try {
+      axios
+        .get("https://api.themoviedb.org/3/movie/upcoming", {
+          headers: header,
+        })
+        .then((res) => {
+          setUpcoming(res.data.results);
+        });
+    } catch (e) {
+      console.log(e);
+    }
+  };
 
   useEffect(() => {
     fetchMovie();
+    fetchMoviePopular();
+    fetchMovieUpComing();
   }, []);
   return (
     <div>
@@ -38,17 +69,19 @@ const Home = () => {
         <Cards movies={nowPlay.slice(5)} />
       </div>
       <div className="space-movies ms-5 me-5 d-flex justify-content-between">
-        <div className="border col">
-          <h3 className="underline text-warning position-relative pb-3">
+        <div className="col ">
+          <h3 className="underline text-warning position-relative pb-3 mb-5">
             Popular Movie
           </h3>
-          {/* <Cards movies={""} /> */}
+          <div className=" height-movie overflow-scroll">
+            <Popular movies={pop} />
+          </div>
         </div>
-        <div className="border col-4">
-          <h3 className="underline text-warning position-relative pb-3">
+        <div className="col-4">
+          <h3 className="underline text-warning position-relative pb-3 mb-5">
             Upcoming Movie
           </h3>
-          {/* <Cards movies={""} /> */}
+          <Upcoming movie={upComing.slice(0, 5)} />
         </div>
       </div>
     </div>
