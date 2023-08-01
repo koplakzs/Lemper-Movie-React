@@ -5,6 +5,7 @@ import Carousel from "../components/Carousel";
 import Cards from "../components/Cards";
 import Upcoming from "../components/Upcoming";
 import Popular from "../components/Popular";
+import Footer from "../components/Footer";
 
 const Home = () => {
   const [nowPlay, setNowPlay] = useState([]);
@@ -77,13 +78,14 @@ const Home = () => {
             <Popular movies={pop} />
           </div>
         </div>
-        <div className="col-4">
-          <h3 className="underline text-warning position-relative pb-3 mb-5">
+        <div className="col-4 border-start border-warning border-4">
+          <h3 className="underline text-warning position-relative pb-3 mb-5 ms-5">
             Upcoming Movie
           </h3>
           <Upcoming movie={upComing.slice(0, 5)} />
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

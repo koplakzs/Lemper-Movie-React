@@ -10,7 +10,7 @@ const CardUpcoming = ({ movie }) => {
         src={`${imgUrl}${movie.poster_path}`}
         alt={`${movie.original_title}`}
       />
-      <div className="d-flex justify-content-between mt-2 ">
+      <div className="d-flex justify-content-center mt-2 ">
         <h5 className="card-movie-title card-title fw-bold text-warning m-0 align-self-center">
           {movie.original_title}
         </h5>

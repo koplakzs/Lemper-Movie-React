@@ -1,9 +1,17 @@
 .nav-link {
   border-bottom: 3px solid transparent;
 }
+.nav-footer {
+  text-decoration: none;
+  color: #636363;
+}
+.nav:hover{
+  border-bottom-color: #654713;
+}
 
-.nav-link:hover{
-  border-bottom-color: rgba(244, 142, 0, 0.25);
+.nav-footer:hover {
+  background-color:#040404;
+  color: #ffc107;
 }
 
 .active {
@@ -49,7 +57,7 @@
 }
 .card-movie-upcoming {
   height: max-content;
-  width: 15rem;
+  width: 80%;
   background-size:cover;
 }
 

@@ -1,4 +1,4 @@
-import Seacrh from "./Seacrh";
+import Seacrh from "./SearchButton";
 import "../App.css";
 import { Link, useLocation } from "react-router-dom";
 const Navigation = () => {
@@ -24,7 +24,7 @@ const Navigation = () => {
           <div className="navbar-nav ms-auto gap-5">
             <Link
               to="/"
-              className={`nav-link text-white ${
+              className={`nav nav-link text-white ${
                 location.pathname === "/" && "active"
               } `}
               aria-current="page"
@@ -33,7 +33,7 @@ const Navigation = () => {
             </Link>
             <Link
               to="/tv-series"
-              className={`nav-link text-white ${
+              className={`nav nav-link text-white ${
                 location.pathname === "/tv-series" && "active"
               } `}
               aria-current="page"
