@@ -1,16 +1,38 @@
-import React from "react";
 import { useParams } from "react-router-dom";
-import CardSearch from "../components/CardSearch";
+import ResultSearch from "../components/ResultSearch";
+import axios from "axios";
+import { useEffect, useState } from "react";
 
 const Search = () => {
   let { params } = useParams();
-  console.log(params);
+  const [searchMovie, setSearchMovie] = useState([]);
+  const header = {
+    Authorization: `Bearer ${import.meta.env.VITE_API_ACCESS_TOKEN}`,
+  };
+
+  const fetchSearch = () => {
+    try {
+      axios
+        .get("https://api.themoviedb.org/3/search/movie", {
+          headers: header,
+          params: {
+            query: `${params}`,
+            include_adult: "false",
+            language: "en-US",
+            page: "1",
+          },
+        })
+        .then((res) => setSearchMovie(res.data.results))
+        .catch((err) => console.log(err));
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  useEffect(() => fetchSearch(), [params]);
   return (
     <div className="mt-5 pt-5 ms-5 me-5">
-      <h3 className="underline text-warning position-relative pb-3 mb-5">
-        Search Movie {params}
-      </h3>
-      <CardSearch movie={""} />
+      <ResultSearch movies={searchMovie} />
     </div>
   );
 };

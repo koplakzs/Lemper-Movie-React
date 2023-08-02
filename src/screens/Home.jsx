@@ -1,11 +1,10 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 import Carousel from "../components/Carousel";
-import Cards from "../components/Cards";
 import Upcoming from "../components/Upcoming";
 import Popular from "../components/Popular";
 import Footer from "../components/Footer";
+import NowPlay from "../components/NowPlay";
 
 const Home = () => {
   const [nowPlay, setNowPlay] = useState([]);
@@ -64,24 +63,13 @@ const Home = () => {
     <div>
       <Carousel movie={nowPlay.slice(0, 5)} />
       <div className="ms-5 me-5 mb-5">
-        <h1 className="underline text-warning position-relative pb-3">
-          Now Playing
-        </h1>
-        <Cards movies={nowPlay.slice(5)} />
+        <NowPlay movies={nowPlay.slice(5)} />
       </div>
-      <div className="space-movies ms-5 me-5 d-flex justify-content-between">
+      <div className="space-movies ms-5 me-5 d-flex justify-content-between flex-wrap">
         <div className="col ">
-          <h3 className="underline text-warning position-relative pb-3 mb-5">
-            Popular Movie
-          </h3>
-          <div className=" height-movie overflow-scroll">
-            <Popular movies={pop} />
-          </div>
+          <Popular movies={pop} />
         </div>
         <div className="col-4 border-start border-warning border-4">
-          <h3 className="underline text-warning position-relative pb-3 mb-5 ms-5">
-            Upcoming Movie
-          </h3>
           <Upcoming movie={upComing.slice(0, 5)} />
         </div>
       </div>
