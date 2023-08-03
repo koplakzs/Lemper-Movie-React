@@ -1,4 +1,6 @@
 import React from "react";
+import ButtonDetails from "./DetailsButton";
+import DetailsButton from "./DetailsButton";
 
 const Card = ({ movie }) => {
   const imgUrl = "https://image.tmdb.org/t/p/w500";
@@ -18,9 +20,7 @@ const Card = ({ movie }) => {
             <h5 className="fw-bold m-0 text-warning">{movie.vote_average} </h5>
           </div>
         </div>
-        <a href="#" className="btn btn-warning rounded-3 shadow-lg mt-2">
-          Detail Movie
-        </a>
+        <DetailsButton idMovie={movie.id} />
       </div>
     </div>
   );

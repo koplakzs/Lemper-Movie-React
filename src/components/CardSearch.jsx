@@ -1,4 +1,5 @@
 import React from "react";
+import DetailsButton from "./DetailsButton";
 
 const CardSearch = ({ movie }) => {
   const imgUrl = "https://image.tmdb.org/t/p/w500";
@@ -22,9 +23,7 @@ const CardSearch = ({ movie }) => {
             <h5 className="align-self-center">Date : {movie.release_date} </h5>
           </div>
           <p className="overview me-5 mt-3"> {movie.overview} </p>
-          <a href="#" className="btn btn-warning rounded-3 shadow-lg mb-0">
-            Detail Movie
-          </a>
+          <DetailsButton idMovie={movie.id} />
         </div>
       </div>
     </div>

@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import DetailsButton from "./DetailsButton";
 
 const Carousel = ({ movie }) => {
   const imgUrl = "https://image.tmdb.org/t/p/original";
@@ -33,9 +34,7 @@ const Carousel = ({ movie }) => {
                 <h1 className="text-shadow fw-bold">{movie.original_title}</h1>
                 <p className="text-shadow-blur fs-5">{movie.overview}</p>
 
-                <Link className="btn btn-warning" to="">
-                  Detail Movie
-                </Link>
+                <DetailsButton idMovie={movie.id} />
               </div>
             </div>
           </div>

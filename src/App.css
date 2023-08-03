@@ -27,7 +27,7 @@
 }
 
 /* Declare heights because of positioning of img element */
-.carousel-item {
+.carousel-item, .detail {
   height: 100vh
 }
 
@@ -90,4 +90,17 @@
 
 .overview {
   text-align: justify;
+}
+
+.detail {
+  background-size: cover;
+  background-position: center;
+}
+
+.detail-info{
+  width: 60%;
+}
+.img-detail {
+  height: 23rem;
+  width: 17rem;
 }
