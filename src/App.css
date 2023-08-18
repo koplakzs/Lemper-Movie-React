@@ -19,6 +19,7 @@
 }
 .carousel {
   margin-bottom: 4rem;
+  height: 100vh;
 }
 /* Since positioning the image, we need to help out the caption */
 .carousel-caption {
@@ -52,7 +53,6 @@
 
 .card-movie {
   height: 20rem;
-  width: 20rem;
   background-size:cover;
 }
 .card-movie-upcoming {
@@ -84,9 +84,7 @@
   width: 12rem;
   margin: 0 auto;
 }
-.img-search{
-  width: 10rem;
-}
+
 
 .overview {
   text-align: justify;
@@ -97,10 +95,12 @@
   background-position: center;
 }
 
-.detail-info{
-  width: 60%;
-}
-.img-detail {
-  height: 23rem;
-  width: 17rem;
+
+@media screen and (max-width: 768px) {
+  .card-movie {
+    height: 10rem;
+  }
+  .carousel {
+    height: 50vh;
+  }
 }

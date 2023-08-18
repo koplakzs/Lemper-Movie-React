@@ -1,7 +1,6 @@
 import React from "react";
 
 const ResultDetail = ({ movie }) => {
-  console.log(movie);
   const imgUrl = "https://image.tmdb.org/t/p/original";
   const imgUrlPoster = "https://image.tmdb.org/t/p/w500";
   return (
@@ -11,13 +10,13 @@ const ResultDetail = ({ movie }) => {
         src={`${imgUrl}${movie.background_path}`}
         alt=""
       />
-      <div className="z-1 d-flex justify-content-center align-items-center gap-4">
+      <div className="z-1 row row-cols-1 row-cols-md-2 justify-content-center  gap-4">
         <img
-          className="img-detail"
+          className="col-5 col-md-3"
           src={`${imgUrlPoster}${movie.poster_path}`}
           alt=""
         />
-        <div className="detail-info">
+        <div className="col-10 d-flex flex-column justify-content-center">
           <div className="d-flex justify-content-center align-items-center gap-4">
             <h1 className="fw-bold text-center"> {movie.title} </h1>
             <div className=" align-self-center d-flex justify-content-center gap-2 align-items-center bg-dark rounded-2 p-1 ps-2 pe-2 ms-2">

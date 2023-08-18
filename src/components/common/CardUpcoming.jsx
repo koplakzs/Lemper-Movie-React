@@ -2,7 +2,6 @@ import React from "react";
 
 const CardUpcoming = ({ movie }) => {
   const imgUrl = "https://image.tmdb.org/t/p/w500";
-
   return (
     <div className="card-movie-upcoming card bg-transparent mb-4">
       <img

@@ -1,6 +1,6 @@
-import Seacrh from "./SearchButton";
-import "../App.css";
+import "../../App.css";
 import { Link, useLocation } from "react-router-dom";
+import Search from "../common/SearchButton";
 const Navigation = () => {
   const location = useLocation();
   return (
@@ -31,17 +31,8 @@ const Navigation = () => {
             >
               Movie
             </Link>
-            <Link
-              to="/tv-series"
-              className={`nav nav-link text-white ${
-                location.pathname === "/tv-series" && "active"
-              } `}
-              aria-current="page"
-            >
-              Tv Series
-            </Link>
           </div>
-          <Seacrh />
+          <Search />
         </div>
       </div>
     </nav>

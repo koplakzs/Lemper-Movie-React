@@ -6,7 +6,7 @@ const Card = ({ movie }) => {
   const imgUrl = "https://image.tmdb.org/t/p/w500";
   return (
     <div
-      className="card-movie card"
+      className="col card-movie card"
       style={{ backgroundImage: `url(${imgUrl}${movie.poster_path})` }}
     >
       <div className="card-body d-flex flex-column">

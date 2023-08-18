@@ -1,5 +1,5 @@
 import React from "react";
-import Card from "./Card";
+import Card from "../common/Card";
 
 const Popular = ({ movies }) => {
   return (
@@ -8,7 +8,7 @@ const Popular = ({ movies }) => {
         Popular Movie
       </h3>
       <div className=" height-movie overflow-scroll">
-        <div className="d-flex justify-content-evenly gap-4 flex-wrap ps-3 pe-3">
+        <div className="row row-cols-1 row-cols-sm-3 gap-3 justify-content-evenly">
           {movies.map((movie, index) => (
             <Card key={index} movie={movie} />
           ))}

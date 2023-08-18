@@ -1,5 +1,5 @@
 import React from "react";
-import CardUpcoming from "./CardUpcoming";
+import CardUpcoming from "../common/CardUpcoming";
 
 const Upcoming = ({ movie }) => {
   return (

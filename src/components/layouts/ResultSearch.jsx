@@ -1,5 +1,5 @@
 import React from "react";
-import CardSearch from "./CardSearch";
+import CardSearch from "../common/CardSearch";
 import { useParams } from "react-router-dom";
 
 const ResultSearch = ({ movies }) => {
